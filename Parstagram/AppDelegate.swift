@@ -11,9 +11,7 @@ import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Parse.initialize(
@@ -22,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                        configuration.server = "https://glacial-headland-97155.herokuapp.com/parse"
                    })
         )
+        
+//        if PFUser.current() != nil {
+//            let main = UIStoryboard(name: "Main", bundle: nil)
+//            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+//            window?.rootViewController = feedNavigationController
+//        }
+        
         return true
     }
 
